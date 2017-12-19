@@ -66,7 +66,6 @@ public class VendingMachine {
 				
 			case "0":
 				System.out.println("結束!");
-				n = -1 ;
 				break;
 			}
 		}
