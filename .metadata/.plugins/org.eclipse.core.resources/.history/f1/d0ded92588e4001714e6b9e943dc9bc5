@@ -1,0 +1,44 @@
+package com.mid;
+
+import java.util.Scanner;
+
+public class VendingMachine {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int n = -1;
+		int money = 0;
+		int a = 15;
+		int b = 20; 
+		int c = 30;
+		
+		System.out.println("販賣機餘額 : "  + money );
+		
+		while (n > 0) {
+			System.out.print("請投幣或選擇飲料(a或b或c),或輸入0結束:");
+			String line = scanner.nextLine();
+			n = Integer.parseInt(line);
+			switch (n) {
+			case 5:
+				System.out.println("投入五元");
+				money = money + 5;
+				break;
+				
+			case 10:
+				System.out.println("投入十元");
+				money = money + 10;
+				break;
+				
+			case 15:
+				System.out.println("投入十五元");
+				money = money + 15;
+				break;
+				
+			
+			case 0:
+				System.out.println("遊戲結束!");
+				break;
+			}
+		}
+	}
+}

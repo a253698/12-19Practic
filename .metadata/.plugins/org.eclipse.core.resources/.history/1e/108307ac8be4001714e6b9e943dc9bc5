@@ -17,24 +17,29 @@ public class VendingMachine {
 			System.out.println("請投幣或選擇飲料(a或b或c),或輸入0結束:");
 			System.out.println("販賣機餘額 : "  + money );
 			String line = scanner.nextLine();
+			n = Integer.parseInt(line);
 			
-			switch (line) {
-			case "5":
+			char a = 97;
+			char b = 98;
+			char c = 99;
+			
+			switch (n) {
+			case 5:
 				System.out.println("投入五元");
 				money = money + 5;
 				break;
 				
-			case "10":
+			case 10:
 				System.out.println("投入十元");
 				money = money + 10;
 				break;
 				
-			case "15":
+			case 15:
 				System.out.println("投入十五元");
 				money = money + 15;
 				break;
 				
-			case "a":
+			case 'a':
 				System.out.println("選擇飲料A");
 				if((money - A)>0){
 					System.out.println("DON!");
@@ -44,7 +49,7 @@ public class VendingMachine {
 				}
 				break;
 				
-			case "b":
+			case 'b':
 				System.out.println("選擇飲料B");
 				if((money - B)>0){
 					System.out.println("DON!");
@@ -54,7 +59,7 @@ public class VendingMachine {
 				}
 				break;	
 				
-			case "c":
+			case 'c':
 				System.out.println("選擇飲料C");
 				if((money - C)>0){
 					System.out.println("DON!");
@@ -64,7 +69,7 @@ public class VendingMachine {
 				}
 				break;
 				
-			case "0":
+			case 0:
 				System.out.println("結束!");
 				break;
 			}
